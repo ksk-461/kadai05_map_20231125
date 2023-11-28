@@ -2,4 +2,58 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
+}
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+/* なんか動かん */
+
+.Namboku {
+    height: calc(100%/3);
+    width: 100%;
+    background-color: #008000;
+    position: relative;
+    overflow: hidden;
+}
+
+.Namboku::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: -1;
+    transform: translateX(-100%);
+    animation-name: test_box_slide;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    transform: translateX(-100%);
+}
+
+@keyframes test_box_slide {
+    0% {
+        transform: translate(-100%, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.Tozai {
+    height: calc(100%/3);
+    width: 100%;
+    background-color: #e46c0a;
+}
+
+.Toho {
+    height: calc(100%/3);
+    width: 100%;
+    background-color: #1d1dff;
 }
