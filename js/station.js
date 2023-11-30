@@ -4,7 +4,8 @@ const tourStops = [
         id: "N01",
         name: "麻生",
         door: "右",
-        restroom: "改札内"
+        restroom: "改札内",
+        url: "https://www.city.sapporo.jp/st/subway/ekikonaizu/documents/sapporo.pdf"
     }, {
         position: { lat: 43.1008609, lng: 141.3418875 },
         id: "N02",
