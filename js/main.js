@@ -44,7 +44,7 @@ async function initMap() {
                         <h2>${name}</h2>
                         <p>ドア: ${door}（進行方向）</p>
                         <p>トイレ： ${restroom}</p>
-                        <p><a href=${url}>駅構内図</a></p>
+                        <p><a href=${url} target="_blank" rel="noopener noreferrer">駅構内図</a></p>
                     </div>`,
             content: pin.element,
         });
