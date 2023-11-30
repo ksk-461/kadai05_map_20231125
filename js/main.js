@@ -31,7 +31,7 @@ async function initMap() {
     const infoWindow = new InfoWindow(); // infoWindoの生成
 
     // マーカーの生成
-    tourStops.forEach(({ position, name, id, door, restroom, url }, i) => {
+    tourStops.forEach(({ position, id, icon, name, door, restroom, url }, i) => {
         const pin = new PinElement({
             glyph: id, //idをマーカーに表示
         });
@@ -39,11 +39,12 @@ async function initMap() {
             position,
             map,
             title: `<div class="info">
+                        <img class="icon" src="${icon}">
                         <p>${id}</p>
                         <h2>${name}</h2>
                         <p>ドア: ${door}（進行方向）</p>
                         <p>トイレ： ${restroom}</p>
-                        <a href=${url}>駅構内図</a>
+                        <p><a href=${url}>駅構内図</a></p>
                     </div>`,
             content: pin.element,
         });

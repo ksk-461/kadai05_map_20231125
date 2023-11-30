@@ -49,3 +49,8 @@
 .subtitle{
     margin: 10px 0;
 }
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
